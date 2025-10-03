@@ -72,29 +72,31 @@ def calculate_percentage():
     print(f'Чисел меньше 5: 52% {Blue}{percentage2}{END}')
 
 import os, time, random
-Green = '\u001b[32m'
-END = '\u001b[0m'
-Red = '\u001b[31m'
-commands = ['PROCEED', 'COMPUTE', 'TRANSMIT', 'RESPONSE']
-binary = ['01001001', '01010100', '01001101', '01001111']
-print(f'{Green}Data received. Starting decoding. . .{END}')
-time.sleep(1)
-os.system('cls')
-print(f'{Green}...{END}')
-time.sleep(0.5)
-os.system('cls')
-for i in range(5):
-    express1 = random.choice(commands)
-    express2 = random.choice(binary)
-    for i in range(20):
-        print(f'{Green}{express1}: {END}{Red}{express2}{END}')
-        print(f"{Green}Progress: [{'#' * (i % 10)}{' ' * (9 - i % 10)}]{END}")
-        time.sleep(0.05)
-        os.system('cls')
-    print(f'{Red}Done!{END}')
+def animation():
+    Green = '\u001b[32m'
+    END = '\u001b[0m'
+    Red = '\u001b[31m'
+    commands = ['PROCEED', 'COMPUTE', 'TRANSMIT', 'RESPONSE']
+    binary = ['01001001', '01010100', '01001101', '01001111']
+    print(f'{Green}Data received. Starting decoding. . .{END}')
     time.sleep(1)
     os.system('cls')
-print(f'{Green}Decoding done. Providing required data below{END}')
-time.sleep(0.5)
-print(f'{Red}ITMO python coding lab1 passed successfully{END}')
+    print(f'{Green}...{END}')
+    time.sleep(0.5)
+    os.system('cls')
+    for i in range(5):
+        express1 = random.choice(commands)
+        express2 = random.choice(binary)
+        for i in range(20):
+            print(f'{Green}{express1}: {END}{Red}{express2}{END}')
+            print(f"{Green}Progress: [{'#' * (i % 10)}{' ' * (9 - i % 10)}]{END}")
+            time.sleep(0.05)
+            os.system('cls')
+        print(f'{Red}Done!{END}')
+        time.sleep(1)
+        os.system('cls')
+    print(f'{Green}Decoding done. Providing required data below{END}')
+    time.sleep(0.5)
+    print(f'{Red}ITMO python coding lab1 passed successfully{END}')
+
 
